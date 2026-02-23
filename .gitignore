@@ -1,0 +1,18 @@
+node_modules/
+.DS_Store
+*.log
+.env
+.idea/
+.vscode/
+
+# 可以在需要时添加输出目录，防止污染 git
+# test-data/
+
+locales
+locals
+output
+output/
+test-data/
+
+# bin
+bin/*

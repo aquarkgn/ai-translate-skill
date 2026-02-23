@@ -1,0 +1,23 @@
+{
+    "name": "ai-translate-skill",
+    "version": "1.0.0",
+    "description": "AI 多语言翻译处理技能 (支持大模型翻译)",
+    "main": "src/utils.js",
+    "bin": {
+        "ai-translate": "./bin/ai-translate.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "i18n",
+        "translate",
+        "ai-translate"
+    ],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "dependencies": {
+        "node-fetch": "^3.3.2"
+    }
+}
