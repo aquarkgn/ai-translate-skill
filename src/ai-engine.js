@@ -45,28 +45,28 @@ async function callAI(systemPrompt, userContent, model, apiKey, apiUrl) {
 
 async function translateBatch(batchMap, targetLang, model, apiKey, apiUrl) {
     const keysCount = Object.keys(batchMap).length;
-    const systemPrompt = `你是一名顶级的多语言本地化专家，精通软件开发、UI/UX 设计及跨文化交流。
-你的唯一任务是将以下 JSON 数据中的文本精准、地道地翻译为目标语言：[ ${targetLang} ]。
+    const systemPrompt = `You are a top-tier multilingual localization expert, proficient in software development, UI/UX design, and cross-cultural communication.
+Your ONLY task is to accurately and naturally translate the text in the following JSON data into the target language: [ ${targetLang} ].
 
-必须严格遵守以下翻译与输出准则：
-1. 【行业术语对齐】：使用现代 Web/App 及软件工程领域的标准术语，确保符合目标用户的常规认知。文本的语气需专业、自然、友好。
-2. 【变量与格式绝对保护】：严禁翻译、修改或丢失任何占位符（如 {{xxx}}, {xxx}, %s, %d）、HTML 标签（如 <b>, <br>）以及特殊符号。它们必须原样保留并在译文中位于合理的语法位置。
-3. 【上下文推理】：参考输入的 JSON Key 推断应用场景（如带有 "btn" 的通常是按钮，需简短且具有行动号召力；带有 "msg" 的通常是提示语，需完整清晰）。
-4. 【UI 长度限制】：翻译应尽量简明扼要，避免导致界面文字溢出。
-5. 【标点保持】：尽量维持与原文一致的末尾标点符号（如省略号... 或问号？）。
-6. 【数据结构一致性】：你返回的结果必须是合法的 JSON 对象。Key 必须与输入完全相同，不论层级有多深，绝不能增减、修改或重命名任何 Key，只能翻译其对应的 Value。当前有 ${keysCount} 个字段需要翻译，返回的 JSON 必须包含正好 ${keysCount} 个对应的字段，严禁遗漏！
-7. 【纯 JSON 输出】：不要包含任何 Markdown 标记（例如不要用 \`\`\`json 包裹），不要包含任何解释、前缀、后缀或备注。只返回纯粹的可解析 JSON 字符串！`;
+You MUST strictly adhere to the following translation and output guidelines:
+1. [Industry terminology alignment] Use modern Web/App and software engineering standard terminology. Ensure a professional, natural, and friendly tone. // 【行业术语对齐】：使用现代软件工程标准术语，保持专业与自然的语气。
+2. [Variable and format protection] NEVER translate, modify, or lose any placeholders (e.g., {{xxx}}, {xxx}, %s), HTML tags (e.g., <b>), or special symbols. Preserving their original forms and grammatical positions. // 【格式绝对保护】：严禁修改占位符、HTML标签和特殊符号。
+3. [Contextual inference] Infer the scenario based on the incoming JSON Key (e.g., "btn" for short, actionable buttons; "msg" for full, clear prompts). // 【上下文推理】：参考 JSON Key 推断应用场景。
+4. [UI length limits] Translations should be as concise as possible to avoid interface text overflow. // 【UI 长度限制】：翻译尽量简明扼要，避免溢出。
+5. [Punctuation preservation] Try to keep the ending punctuation consistent with the original text (e.g., ... or ?). // 【标点保持】：维持与原文一致的末尾标点。
+6. [Data structure consistency] Your returned result MUST be a valid JSON object. Keys MUST exactly match the input. DO NOT add, remove, modify, or rename any Key. You MUST only translate the Values. Currently, there are ${keysCount} fields to be translated. The returned JSON MUST contain exactly ${keysCount} fields, without omission! // 【数据结构一致性】：返回必须是合法JSON且Key完全相同，严禁遗漏！当前共有 ${keysCount} 个字段，必须返回正好 ${keysCount} 个！
+7. [Pure JSON output] DO NOT include any Markdown formatting (e.g., \`\`\`json), explanations, prefixes, or notes. ONLY return a purely parsable JSON string! // 【纯 JSON 输出】：不包含任何 Markdown 标记或附加文本。只返回纯净的 JSON 字符串！`;
 
     const userContent = JSON.stringify(batchMap, null, 2);
     return await callAI(systemPrompt, userContent, model, apiKey, apiUrl);
 }
 
-async function runAITranslate(templatePath, targetLang, outputPath, model, apiKey, apiUrl) {
+async function runAITranslate(templatePath, targetLang, outputPath, model, apiKey, apiUrl, force = false) {
     console.log('加载源模板文件...');
     const sourceData = JSON.parse(fs.readFileSync(templatePath, 'utf8'));
     const allNodes = extractNodes(sourceData);
 
-    console.log(`\n>>> 正在使用 AI 模型 ${model} 处理语言: ${targetLang}`);
+    console.log(`\n >>> 正在使用 AI 模型 ${model} 处理语言: ${targetLang} `);
 
     let translatedData = {};
     if (fs.existsSync(outputPath)) {
@@ -88,15 +88,17 @@ async function runAITranslate(templatePath, targetLang, outputPath, model, apiKe
         }
 
         let isTranslated = false;
-        if (existingVal) {
-            if (existingVal !== sourceVal) {
-                isTranslated = true;
+        if (!force) {
+            if (existingVal) {
+                if (existingVal !== sourceVal) {
+                    isTranslated = true;
+                } else if (!needsTranslation(sourceVal)) {
+                    isTranslated = true;
+                }
             } else if (!needsTranslation(sourceVal)) {
                 isTranslated = true;
+                setNestedValue(translatedData, node.path, sourceVal);
             }
-        } else if (!needsTranslation(sourceVal)) {
-            isTranslated = true;
-            setNestedValue(translatedData, node.path, sourceVal);
         }
 
         if (!isTranslated) {
@@ -120,7 +122,7 @@ async function runAITranslate(templatePath, targetLang, outputPath, model, apiKe
 
         chunk.forEach((node, idx) => {
             const contextHint = node.path.slice(-2).map(p => p.replace(/[^a-zA-Z0-9]/g, '')).join('_');
-            const safeKey = `idx_${idx}_${contextHint}`;
+            const safeKey = `idx_${idx}_${contextHint} `;
             batchMap[safeKey] = node.text;
         });
 
@@ -134,7 +136,7 @@ async function runAITranslate(templatePath, targetLang, outputPath, model, apiKe
 
                 chunk.forEach((node, idx) => {
                     const contextHint = node.path.slice(-2).map(p => p.replace(/[^a-zA-Z0-9]/g, '')).join('_');
-                    const safeKey = `idx_${idx}_${contextHint}`;
+                    const safeKey = `idx_${idx}_${contextHint} `;
                     const tText = translatedBatch[safeKey];
 
                     if (tText) {
@@ -149,7 +151,7 @@ async function runAITranslate(templatePath, targetLang, outputPath, model, apiKe
                 success = true;
             } catch (err) {
                 retryCount++;
-                console.error(`    [错误] 翻译批次失败 (第 ${i + 1}-${i + chunk.length} 条) - 尝试重试 ${retryCount}/3:`, err.message);
+                console.error(`    [错误] 翻译批次失败(第 ${i + 1} -${i + chunk.length} 条) - 尝试重试 ${retryCount}/3:`, err.message);
                 if (retryCount >= 3) {
                     console.error('    达到最大重试次数，跳过此批次。');
                 }
