@@ -1,0 +1,1066 @@
+{
+  "welcome": "Welcome",
+  "hello": "Hello",
+  "language": "Language",
+  "switchLanguage": "Switch Language",
+  "languageSwitcher": {
+    "clickToSelect": "Click to select language",
+    "supportedLanguages": "Supports {{count}} languages"
+  },
+  "calculator": {
+    "title": "Aspect Ratio Calculator",
+    "inputPanel": {
+      "title": "Dimensions",
+      "preset": "Presets",
+      "width": "Width",
+      "height": "Height",
+      "presetTab": "Presets",
+      "customTab": "Custom",
+      "presetInfo": "Format Details",
+      "commonPlatforms": "Supported Platforms",
+      "ratioLocked": "Aspect Ratio Locked ({{ratio}})",
+      "ratioUnlocked": "Aspect Ratio Unlocked",
+      "customRatioGuide": {
+        "title": "How to Use",
+        "step1": "1. Enter your desired width and height.",
+        "step2": "2. Click the lock icon to lock the aspect ratio. Modifying one value will auto-calculate the other.",
+        "step3": "3. Click the lock icon again to unlock and adjust values independently."
+      }
+    },
+    "resultPanel": {
+      "title": "Calculation Results",
+      "resolution": "Resolution",
+      "ratio": "Aspect Ratio",
+      "area": "Area",
+      "perimeter": "Perimeter",
+      "approximateValue": "(Approximate Value)",
+      "totalPixels": "Total Pixels"
+    },
+    "suggestion": {
+      "title": "Pro Tip",
+      "desc": "The {{preset}} aspect ratio is widely used for optimal display across modern screens."
+    },
+    "units": {
+      "px": "Pixels",
+      "cm": "Centimeters",
+      "mm": "Millimeters",
+      "in": "Inches",
+      "ft": "Feet"
+    },
+    "width": "Width",
+    "height": "Height"
+  },
+  "nav": {
+    "title": "Aspect Ratio Calculator",
+    "home": "Home",
+    "platforms": "Platforms",
+    "library": "Library",
+    "settings": "Settings",
+    "converter": "Converter",
+    "compare": "Compare",
+    "guide": "Guide",
+    "crop": "Crop",
+    "blog": "Blog"
+  },
+  "library": {
+    "title": "Aspect Ratio Library",
+    "description": "Discover the perfect aspect ratios for platforms and devices.",
+    "categories": "Categories",
+    "orientations": "Orientations",
+    "tags": "Tags",
+    "noResults": "No results found.",
+    "switchToGrid": "Grid View",
+    "switchToList": "List View",
+    "toggleFavorite": "Add to Favorites",
+    "platformNames": {
+      "instagram": "Instagram",
+      "instagram-story": "Instagram Story",
+      "instagram-feed": "Instagram Feed",
+      "facebook": "Facebook",
+      "facebook-cover": "Facebook Cover",
+      "facebook-feed": "Facebook Feed",
+      "facebook-post": "Facebook Post",
+      "twitter": "Twitter/X",
+      "twitter-header": "Twitter/X Header",
+      "twitter-post": "Twitter/X Post",
+      "linkedin": "LinkedIn",
+      "linkedin-banner": "LinkedIn Banner",
+      "linkedin-feed": "LinkedIn Feed",
+      "tiktok": "TikTok",
+      "youtube": "YouTube",
+      "youtube-shorts": "YouTube Shorts",
+      "vimeo": "Vimeo",
+      "netflix": "Netflix",
+      "douyin": "Douyin/TikTok",
+      "kuaishou": "Kuaishou",
+      "bilibili": "Bilibili",
+      "weibo": "Weibo",
+      "weibo-feed": "Weibo Feed",
+      "weibo-story": "Weibo Story",
+      "pinterest": "Pinterest",
+      "pinterest-pin": "Pinterest Pin",
+      "twitch": "Twitch",
+      "spotify": "Spotify",
+      "soundcloud": "SoundCloud",
+      "mobile": "Mobile",
+      "ultrawide": "Ultrawide",
+      "cinema": "Cinema",
+      "iphone": "iPhone",
+      "android": "Android",
+      "print": "Print",
+      "design": "Design",
+      "xiaohongshu": "Xiaohongshu (RED)",
+      "wechat": "WeChat",
+      "discord": "Discord",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram"
+    },
+    "ratio": {
+      "display": "{{value}}:1",
+      "displayInverse": "1:{{value}}",
+      "decimal": "{{value}}",
+      "preset": {
+        "1:1": "1:1",
+        "1.91:1": "1.91:1",
+        "9:16": "9:16",
+        "4:5": "4:5",
+        "16:9": "16:9",
+        "18:9": "18:9",
+        "21:9": "21:9",
+        "2.35:1": "2.35:1",
+        "2.39:1": "2.39:1",
+        "1.85:1": "1.85:1",
+        "19.5:9": "19.5:9",
+        "20:9": "20:9",
+        "32:9": "32:9",
+        "4:3": "4:3",
+        "3:2": "3:2",
+        "5:4": "5:4",
+        "2:3": "2:3",
+        "A4": "A4",
+        "golden": "Golden Ratio"
+      },
+      "value": {
+        "display": "{{value}}",
+        "decimal": "{{value}}"
+      },
+      "description": {
+        "1:1": "Square format. Ideal for profile pictures and social media grid posts.",
+        "1.91:1": "Landscape format. Standard for LinkedIn and Facebook link previews.",
+        "9:16": "Portrait format. Standard for Instagram Stories, Reels, and TikTok.",
+        "4:5": "Portrait format. Recommended for Instagram feed posts to maximize screen space.",
+        "16:9": "Widescreen format. The universal standard for HD video, YouTube, and TVs.",
+        "18:9": "Modern smartphone display ratio (2:1).",
+        "21:9": "Ultrawide format. Common for premium monitors and cinematic gaming.",
+        "2.35:1": "Cinemascope. The classic anamorphic standard for theatrical films.",
+        "2.39:1": "Modern anamorphic widescreen standard for theatrical releases.",
+        "1.85:1": "Standard widescreen format in US theatrical cinema.",
+        "19.5:9": "Tall modern smartphone ratio, used to accommodate sensor notches/islands.",
+        "20:9": "Ultrawide smartphone aspect ratio.",
+        "32:9": "Super ultrawide aspect ratio, equivalent to dual 16:9 monitors.",
+        "4:3": "Standard definition format. Classic TV and standard photography.",
+        "3:2": "Classic 35mm film and standard DSLR photography ratio.",
+        "5:4": "Traditional photography format and classic PC monitors.",
+        "2:3": "Vertical 35mm photography standard.",
+        "A4": "International standard paper size (ISO 216).",
+        "golden": "The Golden Ratio (~1.618), renowned for its aesthetic harmony."
+      }
+    },
+    "categoryList": {
+      "social": {
+        "name": "Social Media",
+        "description": "Common aspect ratios for social media platforms"
+      },
+      "standard": {
+        "name": "Standard",
+        "description": "Common standard display ratios"
+      },
+      "video": {
+        "name": "Video",
+        "description": "Standard video aspect ratios"
+      },
+      "mobile": {
+        "name": "Mobile",
+        "description": "Mobile device display ratios"
+      },
+      "legacy": {
+        "name": "Legacy",
+        "description": "Legacy display and device ratios"
+      },
+      "cinematic": {
+        "name": "Cinematic",
+        "description": "Professional film production ratios"
+      },
+      "ultrawide": {
+        "name": "Ultrawide",
+        "description": "Ultrawide display ratios"
+      },
+      "photography": {
+        "name": "Photography",
+        "description": "Professional photography ratios"
+      },
+      "special": {
+        "name": "Special",
+        "description": "Special purpose ratios (e.g. A4, Golden Ratio)"
+      }
+    },
+    "orientationList": {
+      "portrait": "Portrait",
+      "landscape": "Landscape",
+      "square": "Square"
+    },
+    "tagList": {
+      "social": "Social",
+      "photo": "Photo",
+      "video": "Video",
+      "streaming": "Streaming",
+      "device": "Device",
+      "cinema": "Cinema",
+      "movie": "Movie",
+      "mobile": "Mobile",
+      "ultrawide": "Ultrawide",
+      "print": "Print",
+      "document": "Document",
+      "special": "Special",
+      "golden": "Golden Ratio",
+      "professional": "Professional",
+      "business": "Business",
+      "career": "Career",
+      "news": "News",
+      "article": "Article",
+      "feed": "Feed",
+      "post": "Post",
+      "story": "Story",
+      "timeline": "Timeline",
+      "banner": "Banner",
+      "cover": "Cover"
+    },
+    "platformList": {
+      "instagram": {
+        "name": "Instagram",
+        "description": "Share photos and videos with your followers"
+      },
+      "facebook": {
+        "name": "Facebook",
+        "description": "Social media platform"
+      },
+      "twitter": {
+        "name": "Twitter/X",
+        "description": "Share short messages and media content"
+      },
+      "linkedin": {
+        "name": "LinkedIn",
+        "description": "Professional networking and content sharing platform"
+      },
+      "tiktok": {
+        "name": "TikTok",
+        "description": "Create and share short video content"
+      },
+      "youtube": {
+        "name": "YouTube",
+        "description": "World's largest video sharing platform"
+      },
+      "vimeo": {
+        "name": "Vimeo",
+        "description": "Professional video sharing platform"
+      },
+      "netflix": {
+        "name": "Netflix",
+        "description": "Streaming video platform"
+      },
+      "mobile": {
+        "name": "Mobile Device",
+        "description": "Common mobile device ratios"
+      },
+      "ultrawide": {
+        "name": "Ultrawide Monitor",
+        "description": "Ultrawide screen ratios"
+      },
+      "cinema": {
+        "name": "Cinema",
+        "description": "Cinema shooting and projection ratios"
+      },
+      "iphone": {
+        "name": "iPhone",
+        "description": "iPhone device screen ratios"
+      },
+      "android": {
+        "name": "Android",
+        "description": "Android device screen ratios"
+      },
+      "print": {
+        "name": "Print",
+        "description": "Standard print ratios"
+      },
+      "design": {
+        "name": "Design",
+        "description": "Common design field ratios"
+      },
+      "linkedin-feed": {
+        "name": "LinkedIn Feed",
+        "description": "Share professional updates and content"
+      },
+      "instagram-feed": {
+        "name": "Instagram Feed",
+        "description": "Photo and short video content"
+      },
+      "facebook-feed": {
+        "name": "Facebook Feed",
+        "description": "Social updates and shared content"
+      },
+      "facebook-post": {
+        "name": "Facebook Post",
+        "description": "Social media articles and posts"
+      },
+      "twitter-post": {
+        "name": "Twitter/X Post",
+        "description": "Short messages and media posts"
+      },
+      "weibo": {
+        "name": "Weibo",
+        "description": "Chinese social media platform"
+      },
+      "weibo-feed": {
+        "name": "Weibo Feed",
+        "description": "Weibo photo and video content"
+      },
+      "weibo-story": {
+        "name": "Weibo Story",
+        "description": "Short video stories that disappear after 24 hours"
+      }
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "theme": {
+      "title": "Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "neon": "Neon"
+    },
+    "fontSize": {
+      "title": "Font Size",
+      "small": "Small",
+      "normal": "Normal",
+      "large": "Large"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "noResults": "No results found",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "finish": "Finish",
+    "tryDifferentFilters": "Try adjusting your filter criteria"
+  },
+  "filter": {
+    "title": "Filters",
+    "activeFilters": "Active filters",
+    "clearAll": "Clear All",
+    "categories": "Categories",
+    "orientations": "Orientations",
+    "tags": "Tags",
+    "selected": "Selected"
+  },
+  "footer": {
+    "about": {
+      "title": "About Us",
+      "description": "A professional tool for calculating and managing display dimensions and aspect ratios."
+    },
+    "quickLinks": {
+      "title": "Quick Links"
+    },
+    "resources": {
+      "title": "Resources",
+      "documentation": "Documentation",
+      "tutorials": "Tutorials",
+      "api": "API Reference"
+    },
+    "contact": {
+      "title": "Contact Us"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy Policy",
+      "cookies": "Cookie Policy",
+      "terms": "Terms of Service"
+    },
+    "copyright": "All rights reserved."
+  },
+  "platforms": {
+    "title": "Platform Aspect Ratios",
+    "description": "Find the perfect aspect ratio for your content across different platforms",
+    "categories": "Categories",
+    "orientations": "Orientations",
+    "tags": "Tags",
+    "categoryList": {
+      "social": "Social Media",
+      "video": "Video Platform",
+      "live": "Live Streaming",
+      "cinema": "Cinema",
+      "device": "Device",
+      "print": "Print",
+      "audio": "Audio",
+      "image": "Image",
+      "other": "Other",
+      "messaging": "Messaging"
+    },
+    "orientationList": {
+      "portrait": "Portrait",
+      "landscape": "Landscape",
+      "square": "Square"
+    },
+    "tagList": {
+      "short": "Short Video",
+      "portrait": "Portrait",
+      "social": "Social",
+      "photo": "Photo",
+      "video": "Video",
+      "story": "Story",
+      "landscape": "Landscape",
+      "post": "Post",
+      "professional": "Professional",
+      "share": "Share",
+      "bullet": "Bullet Screen",
+      "streaming": "Streaming",
+      "gaming": "Gaming",
+      "music": "Music",
+      "audio": "Audio",
+      "live": "Live",
+      "messaging": "Messaging",
+      "community": "Community",
+      "lifestyle": "Lifestyle",
+      "design": "Design",
+      "portfolio": "Portfolio",
+      "status": "Status",
+      "reels": "Reels"
+    },
+    "platformList": {
+      "instagram": {
+        "name": "Instagram",
+        "description": "Share photos and videos with your followers"
+      },
+      "instagram-story": {
+        "name": "Instagram Story / Reels",
+        "description": "Instagram Stories and Reels short videos"
+      },
+      "facebook": {
+        "name": "Facebook",
+        "description": "Connect with friends and share content"
+      },
+      "facebook-cover": {
+        "name": "Facebook Cover",
+        "description": "Showcase your profile with a cover photo"
+      },
+      "twitter": {
+        "name": "Twitter",
+        "description": "Share short messages and media"
+      },
+      "twitter-header": {
+        "name": "Twitter Header",
+        "description": "Customize your profile header"
+      },
+      "youtube": {
+        "name": "YouTube",
+        "description": "Share and watch videos"
+      },
+      "youtube-shorts": {
+        "name": "YouTube Shorts",
+        "description": "Create and share short-form vertical videos"
+      },
+      "tiktok": {
+        "name": "TikTok",
+        "description": "Create and share short-form videos"
+      },
+      "douyin": {
+        "name": "TikTok",
+        "description": "Leading short video platform in China"
+      },
+      "kuaishou": {
+        "name": "Kuaishou",
+        "description": "Short video creation and sharing platform"
+      },
+      "bilibili": {
+        "name": "Bilibili",
+        "description": "Bullet screen video site"
+      },
+      "linkedin": {
+        "name": "LinkedIn",
+        "description": "Professional social platform, feeds support 1.91:1"
+      },
+      "linkedin-banner": {
+        "name": "LinkedIn Banner",
+        "description": "Customize your professional profile"
+      },
+      "pinterest": {
+        "name": "Pinterest",
+        "description": "Discover and share ideas through images"
+      },
+      "pinterest-pin": {
+        "name": "Pinterest Pin",
+        "description": "Create and share visual content"
+      },
+      "netflix": {
+        "name": "Netflix",
+        "description": "Global streaming giant, supports 16:9 and widescreen"
+      },
+      "vimeo": {
+        "name": "Vimeo",
+        "description": "Professional video sharing platform"
+      },
+      "twitch": {
+        "name": "Twitch",
+        "description": "Game live streaming and online entertainment platform"
+      },
+      "spotify": {
+        "name": "Spotify",
+        "description": "Leading global music streaming platform"
+      },
+      "soundcloud": {
+        "name": "SoundCloud",
+        "description": "Music and audio sharing platform"
+      },
+      "linkedin-feed": {
+        "name": "LinkedIn Feed",
+        "description": "LinkedIn feed images and videos"
+      },
+      "instagram-feed": {
+        "name": "Instagram Feed",
+        "description": "Photo and short video content"
+      },
+      "facebook-feed": {
+        "name": "Facebook Feed",
+        "description": "Social updates and shared content"
+      },
+      "facebook-post": {
+        "name": "Facebook Post",
+        "description": "Social media articles and posts"
+      },
+      "twitter-post": {
+        "name": "Twitter Post",
+        "description": "Short messages and media posts"
+      },
+      "weibo": {
+        "name": "Weibo",
+        "description": "Chinese social media platform, 16:9 for landscape images"
+      },
+      "weibo-feed": {
+        "name": "Weibo Feed",
+        "description": "Weibo photo and video content"
+      },
+      "weibo-story": {
+        "name": "Weibo Story",
+        "description": "Short video stories that disappear after 24 hours"
+      },
+      "mobile": {
+        "name": "Mobile Device",
+        "description": "Common mobile device ratios"
+      },
+      "ultrawide": {
+        "name": "Ultrawide Monitor",
+        "description": "Ultrawide screen ratios"
+      },
+      "cinema": {
+        "name": "Cinema",
+        "description": "Cinema shooting and projection ratios"
+      },
+      "iphone": {
+        "name": "iPhone",
+        "description": "iPhone device screen ratios"
+      },
+      "android": {
+        "name": "Android",
+        "description": "Android device screen ratios"
+      },
+      "print": {
+        "name": "Print",
+        "description": "Standard print ratios"
+      },
+      "design": {
+        "name": "Design",
+        "description": "Common design field ratios"
+      },
+      "threads": {
+        "name": "Threads",
+        "description": "Meta text-based social app with image/video support"
+      },
+      "snapchat": {
+        "name": "Snapchat",
+        "description": "Ephemeral social platform, full-screen portrait experience"
+      },
+      "reddit": {
+        "name": "Reddit",
+        "description": "Image posts (4:3 recommended)"
+      },
+      "xiaohongshu": {
+        "name": "Xiaohongshu (RED)",
+        "description": "Lifestyle notes (3:4 recommended)"
+      },
+      "wechat-moments": {
+        "name": "WeChat Moments",
+        "description": "Post images (1:1 optimal)"
+      },
+      "wechat-channels": {
+        "name": "WeChat Channels",
+        "description": "Short videos (6:7 recommended)"
+      },
+      "whatsapp": {
+        "name": "WhatsApp",
+        "description": "Status updates (9:16 portrait)"
+      },
+      "telegram": {
+        "name": "Telegram",
+        "description": "Encrypted messaging with rich media support"
+      },
+      "discord": {
+        "name": "Discord",
+        "description": "Gaming and community (16:9 for embeds)"
+      },
+      "tencent-video": {
+        "name": "Tencent Video",
+        "description": "Tencent's video streaming platform, standard 16:9"
+      },
+      "iqiyi": {
+        "name": "iQIYI",
+        "description": "Comprehensive video platform, standard 16:9"
+      },
+      "youku": {
+        "name": "Youku",
+        "description": "Alibaba's video streaming platform"
+      },
+      "disney-plus": {
+        "name": "Disney+",
+        "description": "Disney streaming platform"
+      },
+      "apple-tv": {
+        "name": "Apple TV+",
+        "description": "Apple original content streaming"
+      },
+      "amazon-prime": {
+        "name": "Amazon Prime Video",
+        "description": "Amazon streaming platform"
+      },
+      "netease-music": {
+        "name": "NetEase Cloud Music",
+        "description": "Chinese music streaming, album art 1:1"
+      },
+      "behance": {
+        "name": "Behance",
+        "description": "Adobe's design portfolio platform"
+      },
+      "dribbble": {
+        "name": "Dribbble",
+        "description": "Designer showcase community, standard shot at 4:3"
+      }
+    }
+  },
+  "home": {
+    "title": "Aspect Ratio Calculator",
+    "subtitle": "Calculate and manage dimensions effortlessly.",
+    "description": "A professional tool for calculating display dimensions and aspect ratios. Packed with presets for social media, video platforms, print, and design workflows."
+  },
+  "ad": {
+    "title": "Support Us",
+    "description": "Your support keeps this tool free and regularly updated."
+  },
+  "guide": {
+    "title": "Platform Guidelines",
+    "subtitle": "Whether you are resizing images, editing videos, or crafting designs, our calculator ensures pixel-perfect results across all platforms. Enter one dimension, and we'll instantly compute the rest.",
+    "features": {
+      "title": "Core Features",
+      "instant": {
+        "title": "Real-time Calculation",
+        "desc": "Type any dimension for instant, exact aspect ratio conversions."
+      },
+      "precise": {
+        "title": "Pixel-Perfect",
+        "desc": "Scale media accurately to preserve image and video fidelity."
+      },
+      "design": {
+        "title": "Designer-Friendly",
+        "desc": "Built for creators with standard setups for UI, print, and photography."
+      },
+      "platforms": {
+        "title": "Platform Presets",
+        "desc": "Ready-to-use specs for leading social and video platforms."
+      }
+    },
+    "useCases": {
+      "title": "Use Cases",
+      "images": {
+        "title": "Image Resizing",
+        "desc": "Crop photos perfectly for social media grids and profile banners."
+      },
+      "videos": {
+        "title": "Video Production",
+        "desc": "Frame content correctly for TikTok, YouTube, or cinematic outputs."
+      },
+      "social": {
+        "title": "Social Content",
+        "desc": "Create platform-compliant posts that avoid unwanted cropping."
+      },
+      "print": {
+        "title": "Print Media",
+        "desc": "Prep files for standard paper sizes with accurate dimensional ratios."
+      }
+    },
+    "importance": {
+      "title": "Why Aspect Ratios Matter",
+      "description": "Aspect ratios dictate how media is framed on a device. Using the correct ratio ensures your content isn't awkwardly stretched, squeezed, or cropped out of frame, delivering a professional viewing experience."
+    },
+    "description": "Find the ideal aspect ratio and resolution for any project.",
+    "searchPlaceholder": "Search platforms or dimensions...",
+    "scenarios": {
+      "shortVideo": {
+        "title": "Short-form Video",
+        "desc": "TikTok, YouTube Shorts, Instagram Reels (9:16)"
+      },
+      "coverImage": {
+        "title": "Thumbnails & Covers",
+        "desc": "YouTube thumbnails, Podcast covers, Banners"
+      },
+      "socialPost": {
+        "title": "Social Feed Posts",
+        "desc": "Instagram, X, Facebook feeds"
+      },
+      "livestream": {
+        "title": "Live Streaming",
+        "desc": "Twitch, YouTube Live (16:9)"
+      },
+      "videoEditing": {
+        "title": "Filmmaking",
+        "desc": "Netflix, Disney+, Theatrical standards"
+      },
+      "designPortfolio": {
+        "title": "Design Portfolios",
+        "desc": "Behance, Dribbble showcases"
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Learn how to make the most of the Aspect Ratio Calculator.",
+    "basic": {
+      "what": {
+        "question": "What is the Aspect Ratio Calculator?",
+        "answer": "It's a free, professional tool designed to calculate media dimensions accurately. It helps developers, designers, and creators size their content perfectly for social media, video platforms, and print."
+      },
+      "features": {
+        "question": "What can this tool do?",
+        "answer": "It provides instant calculation across multiple units, an extensive library of platform presets, responsive value locking, and support for over 180 languages."
+      },
+      "units": {
+        "question": "Which units are supported?",
+        "answer": "Pixels (px) | Centimeters (cm) | Millimeters (mm) | Inches (in) | Feet (ft)"
+      }
+    },
+    "platforms": {
+      "social": {
+        "question": "Which social platforms do you support?",
+        "answer": "Instagram (1:1, 4:5, 9:16) | Facebook | X/Twitter (16:9) | LinkedIn | TikTok | Snapchat"
+      },
+      "video": {
+        "question": "Which video resolutions do you cover?",
+        "answer": "YouTube (16:9, 9:16) | Vimeo | Twitch | Netflix | Theatrical widescreens"
+      },
+      "special": {
+        "question": "Do you support cinematic and print formats?",
+        "answer": "Yes. We include Cinemascope (2.35:1), Ultrawide monitors (21:9), standard photography (3:2), ISO paper sizes (A4), and the Golden Ratio (1.618:1)."
+      }
+    },
+    "usage": {
+      "custom": {
+        "question": "How to use the custom ratio feature?",
+        "answer": "1. Enter your desired width and height values|2. Click the lock button to maintain the current ratio - modifying either value will automatically calculate the other|3. Click the lock button again to unlock the ratio and freely adjust both values"
+      },
+      "results": {
+        "question": "What information is included in the calculation results?",
+        "answer": "Resolution|Aspect ratio|Area|Perimeter|Total pixels|Approximate value reference"
+      }
+    }
+  },
+  "seo": {
+    "title": "Video Aspect Ratio Calculator - Free Online Tool for All Platforms",
+    "description": "Professional video aspect ratio calculator supporting all major platforms including TikTok, YouTube, Instagram, Douyin. Calculate perfect dimensions for your content with real-time results.",
+    "keywords": "aspect ratio calculator, video ratio, TikTok ratio, YouTube dimensions, Instagram size, video calculator, content creator tools, social media dimensions",
+    "ogTitle": "Video Aspect Ratio Calculator - Perfect Dimensions for Every Platform",
+    "ogDescription": "Calculate perfect video dimensions for TikTok, YouTube, Instagram and more. Free professional tool with real-time calculations and platform presets.",
+    "twitterTitle": "Video Aspect Ratio Calculator - Free Tool",
+    "twitterDescription": "Professional video aspect ratio calculator for all platforms. Calculate perfect dimensions with real-time results.",
+    "structuredData": {
+      "name": "Video Aspect Ratio Calculator",
+      "description": "Professional online tool for calculating video aspect ratios and dimensions for all major social media and video platforms.",
+      "author": "Video Tools Suite",
+      "features": {
+        "calculation": "Real-time aspect ratio calculations",
+        "multiPlatform": "Support for all major platforms (TikTok, YouTube, Instagram, etc.)",
+        "realTime": "Instant calculation results",
+        "mobileOptimized": "Mobile-friendly responsive design",
+        "free": "Completely free to use"
+      }
+    },
+    "faq": {
+      "howToUse": {
+        "question": "How to use the video aspect ratio calculator?",
+        "answer": "Simply select a platform preset or enter custom width and height values. The calculator will instantly show the aspect ratio, resolution, and other relevant metrics for your video content."
+      },
+      "supportedPlatforms": {
+        "question": "Which platforms are supported?",
+        "answer": "We support all major platforms including TikTok, YouTube, Instagram, Douyin, Kuaishou, Bilibili, and many more. You can also use custom dimensions for any platform."
+      },
+      "isFree": {
+        "question": "Is this calculator free to use?",
+        "answer": "Yes, our video aspect ratio calculator is completely free to use with no registration required. Access all features without any limitations."
+      },
+      "mobileSupport": {
+        "question": "Does it work on mobile devices?",
+        "answer": "Absolutely! Our calculator is fully optimized for mobile devices and tablets, providing the same functionality across all screen sizes."
+      },
+      "platforms": {
+        "question": "支持哪些平台？",
+        "answer": "支持抖音、快手、YouTube、Instagram、TikTok、Bilibili等所有主流社交媒体和视频平台。"
+      },
+      "accuracy": {
+        "question": "计算结果准确吗？",
+        "answer": "我们的计算器使用精确的数学算法，确保所有计算结果的准确性，适合专业内容创作使用。"
+      }
+    }
+  },
+  "languageInfo": {
+    "ar": "Arabic",
+    "zh": "Chinese",
+    "en": "English",
+    "fil": "Filipino",
+    "fr": "French",
+    "id": "Indonesian",
+    "my": "Myanmar",
+    "pt": "Portuguese",
+    "ru": "Russian",
+    "fa": "Persian",
+    "es": "Spanish",
+    "th": "Thai",
+    "vi": "Vietnamese",
+    "tr": "Turkish",
+    "ha": "Hausa",
+    "ur": "Urdu",
+    "ak": "Akan",
+    "bn": "Bengali",
+    "hi": "Hindi",
+    "ig": "Igbo",
+    "ku": "Kurdish",
+    "ml": "Malayalam",
+    "rw": "Kinyarwanda",
+    "sv": "Swedish",
+    "zu": "Zulu",
+    "de": "German",
+    "it": "Italian",
+    "ja": "Japanese",
+    "ko": "Korean",
+    "nl": "Dutch",
+    "pl": "Polish",
+    "da": "Danish",
+    "no": "Norwegian",
+    "fi": "Finnish",
+    "cs": "Czech",
+    "sk": "Slovak",
+    "hu": "Hungarian",
+    "ro": "Romanian",
+    "bg": "Bulgarian",
+    "hr": "Croatian",
+    "sr": "Serbian",
+    "sl": "Slovenian",
+    "et": "Estonian",
+    "lv": "Latvian",
+    "lt": "Lithuanian",
+    "el": "Greek",
+    "he": "Hebrew",
+    "sw": "Swahili",
+    "am": "Amharic",
+    "yo": "Yoruba",
+    "ms": "Malay",
+    "tl": "Tagalog",
+    "ta": "Tamil",
+    "te": "Telugu",
+    "kn": "Kannada",
+    "gu": "Gujarati",
+    "mr": "Marathi",
+    "pa": "Punjabi",
+    "or": "Odia",
+    "as": "Assamese",
+    "ne": "Nepali",
+    "si": "Sinhala",
+    "km": "Khmer",
+    "lo": "Lao",
+    "ka": "Georgian",
+    "hy": "Armenian",
+    "az": "Azerbaijani",
+    "kk": "Kazakh",
+    "ky": "Kyrgyz",
+    "uz": "Uzbek",
+    "tg": "Tajik",
+    "tk": "Turkmen",
+    "mn": "Mongolian",
+    "bo": "Tibetan",
+    "ug": "Uyghur",
+    "af": "Afrikaans",
+    "xh": "Xhosa",
+    "st": "Sesotho",
+    "tn": "Setswana",
+    "ss": "Siswati",
+    "ve": "Venda",
+    "ts": "Tsonga",
+    "nr": "Ndebele",
+    "nso": "Northern Sotho",
+    "so": "Somali",
+    "om": "Oromo",
+    "ti": "Tigrinya",
+    "lg": "Luganda",
+    "rn": "Kirundi",
+    "ny": "Chichewa",
+    "sn": "Shona",
+    "nd": "Ndebele",
+    "mg": "Malagasy",
+    "bm": "Bambara",
+    "wo": "Wolof",
+    "ff": "Fulah",
+    "ee": "Ewe",
+    "tw": "Twi",
+    "gaa": "Ga",
+    "dag": "Dagbani",
+    "kab": "Kabyle",
+    "ber": "Berber",
+    "dz": "Dzongkha",
+    "ii": "Sichuan Yi",
+    "za": "Zhuang",
+    "kok": "Konkani",
+    "mai": "Maithili",
+    "sat": "Santali",
+    "doi": "Dogri",
+    "ks": "Kashmiri",
+    "sd": "Sindhi",
+    "ps": "Pashto",
+    "bal": "Balochi",
+    "brh": "Brahui",
+    "ckb": "Central Kurdish",
+    "lrc": "Northern Luri",
+    "mzn": "Mazanderani",
+    "glk": "Gilaki",
+    "lki": "Laki",
+    "bqi": "Bakhtiari",
+    "qu": "Quechua",
+    "gn": "Guarani",
+    "ay": "Aymara",
+    "nah": "Nahuatl",
+    "myn": "Maya",
+    "chr": "Cherokee",
+    "lkt": "Lakota",
+    "nv": "Navajo",
+    "iu": "Inuktitut",
+    "cr": "Cree",
+    "oj": "Ojibwe",
+    "haw": "Hawaiian",
+    "sm": "Samoan",
+    "to": "Tongan",
+    "fj": "Fijian",
+    "ty": "Tahitian",
+    "mi": "Maori",
+    "gil": "Gilbertese",
+    "mh": "Marshallese",
+    "na": "Nauru",
+    "pau": "Palauan",
+    "pon": "Pohnpeian",
+    "kos": "Kosraean",
+    "yap": "Yapese",
+    "chk": "Chuukese",
+    "eu": "Basque",
+    "ca": "Catalan",
+    "gl": "Galician",
+    "cy": "Welsh",
+    "ga": "Irish",
+    "gd": "Scottish Gaelic",
+    "br": "Breton",
+    "co": "Corsican",
+    "oc": "Occitan",
+    "rm": "Romansh",
+    "fur": "Friulian",
+    "sc": "Sardinian",
+    "vec": "Venetian",
+    "lmo": "Lombard",
+    "pms": "Piedmontese",
+    "nap": "Neapolitan",
+    "scn": "Sicilian",
+    "mt": "Maltese",
+    "is": "Icelandic",
+    "fo": "Faroese",
+    "kl": "Greenlandic",
+    "se": "Northern Sami",
+    "smj": "Lule Sami",
+    "sma": "Southern Sami",
+    "smn": "Inari Sami",
+    "sms": "Skolt Sami",
+    "eo": "Esperanto",
+    "ia": "Interlingua",
+    "ie": "Interlingue",
+    "vo": "Volapük",
+    "jbo": "Lojban",
+    "tlh": "Klingon",
+    "art": "Constructed Languages",
+    "la": "Latin",
+    "grc": "Ancient Greek",
+    "sa": "Sanskrit",
+    "pi": "Pali",
+    "got": "Gothic",
+    "non": "Old Norse",
+    "ang": "Old English",
+    "gmh": "Middle High German",
+    "enm": "Middle English",
+    "frm": "Middle French",
+    "dum": "Middle Dutch"
+  },
+  "converter": {
+    "title": "Ratio Converter",
+    "description": "Scale dimensions while preserving the layout. Generate assets for all platform requirements at once.",
+    "sourceSize": "Source Dimensions",
+    "detectedRatio": "Detected Aspect Ratio",
+    "scaleTitle": "Proportional Scaling",
+    "targetWidth": "Target Width",
+    "targetHeight": "Target Height",
+    "enterWidth": "Enter target width",
+    "enterHeight": "Enter target height",
+    "result": "Output",
+    "multiPlatform": "Export for All Platforms",
+    "multiPlatformDesc": "Auto-generate recommended sizes tailored for social and video specs."
+  },
+  "compare": {
+    "title": "Visual Comparison",
+    "description": "Overlay different aspect ratios to compare framing differences.",
+    "selectRatios": "Select Ratios to Compare",
+    "centerAlign": "Align Center",
+    "topLeftAlign": "Align Top-Left"
+  },
+  "crop": {
+    "title": "Crop Previewer",
+    "description": "Upload a photo to preview how it gets cropped across various aspect ratios.",
+    "uploadBtn": "Upload Image",
+    "uploadHint": "Click or drag an image here",
+    "selectRatio": "Target Area",
+    "dragHint": "Drag to pan the image",
+    "originalSize": "Original"
+  },
+  "blog": {
+    "title": "Knowledge Base",
+    "description": "Insights on aspect ratios, platform specifications, and design workflows.",
+    "readMore": "Read Article",
+    "backToList": "Back to Blog",
+    "notFound": "Article not found."
+  }
+}

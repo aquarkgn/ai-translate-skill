@@ -7,7 +7,7 @@ const {
 } = require('./utils');
 
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
-const BATCH_SIZE = 20;
+const BATCH_SIZE = 100;
 
 async function callAI(systemPrompt, userContent, model, apiKey, apiUrl) {
     const response = await fetch(`${apiUrl}`, {
