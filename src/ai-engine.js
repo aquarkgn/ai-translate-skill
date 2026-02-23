@@ -7,7 +7,7 @@ const {
 } = require('./utils');
 
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
-const BATCH_SIZE = 50;
+const BATCH_SIZE = 20;
 
 async function callAI(systemPrompt, userContent, model, apiKey, apiUrl) {
     const response = await fetch(`${apiUrl}`, {
@@ -23,6 +23,7 @@ async function callAI(systemPrompt, userContent, model, apiKey, apiUrl) {
                 { role: 'user', content: userContent }
             ],
             temperature: 0.1,
+            max_tokens: 4096,
             response_format: { type: 'json_object' }
         })
     });
@@ -43,17 +44,18 @@ async function callAI(systemPrompt, userContent, model, apiKey, apiUrl) {
 }
 
 async function translateBatch(batchMap, targetLang, model, apiKey, apiUrl) {
-    const systemPrompt = `你是一名精通计算机软件、UI 设计以及英语领域的顶级多语言本地化专家。
-你的核心任务是将提供的 JSON 数据中的文本精准翻译为目标语言：[ ${targetLang} ]。
+    const keysCount = Object.keys(batchMap).length;
+    const systemPrompt = `你是一名顶级的多语言本地化专家，精通软件开发、UI/UX 设计及跨文化交流。
+你的唯一任务是将以下 JSON 数据中的文本精准、地道地翻译为目标语言：[ ${targetLang} ]。
 
-请严格遵守以下专业翻译准则：
-1. 【专业与行业标准】：提供高度垂直且精准的本地化翻译，完美契合现代 Web 应用与高级软件产品的界面语境，使用计算机及 UI 交互领域的通用标准术语。
-2. 【深度上下文感知】：利用 JSON 的键名（Key）作为核心语境线索，推断该文本所处的界面位置（如操作按钮、导航菜单、占位符或验证提示等），并定制符合该场景的最优短语。
-3. 【绝对变量保护】：严禁翻译或篡改任何代码层面的变量名、插值表达式及符号占位符（例如：{{...}}、{xxx}、%s、HTML 标签等），必须完整原样保留其原始格式和相对位置。
-4. 【母语级自然与地道】：确保译文不仅信息准确，而且表达极为地道。句式与用词需充分符合 [ ${targetLang} ] 主流母语用户的阅读与交互习惯，彻底消除机器翻译的生硬感。
-5. 【UI 视觉空间限制】：基于你专业的 UI 设计经验，必须考虑到各终端界面的可视局限性。译文应当尽可能精干、利落，避免冗长的从句导致界面排版溢出或拥挤。
-6. 【数据结构完全一致】：返回的结果必须是一个规范的 JSON 对象。新对象的 Key 及嵌套层级必须与输入的 JSON 数据彻底保持一致，绝不可擅自增删或修改 Key，仅能对对应的 Value 实施翻译。
-7. 【纯粹 JSON 格式直出】：只输出纯净、能直接被程序解析的原生 JSON 字符串。绝对禁止附带任何 Markdown 语法标签（千万不要使用 \`\`\`json 等包裹），也决不可以有任何寒暄、辅助说明或前缀后缀文本。`;
+必须严格遵守以下翻译与输出准则：
+1. 【行业术语对齐】：使用现代 Web/App 及软件工程领域的标准术语，确保符合目标用户的常规认知。文本的语气需专业、自然、友好。
+2. 【变量与格式绝对保护】：严禁翻译、修改或丢失任何占位符（如 {{xxx}}, {xxx}, %s, %d）、HTML 标签（如 <b>, <br>）以及特殊符号。它们必须原样保留并在译文中位于合理的语法位置。
+3. 【上下文推理】：参考输入的 JSON Key 推断应用场景（如带有 "btn" 的通常是按钮，需简短且具有行动号召力；带有 "msg" 的通常是提示语，需完整清晰）。
+4. 【UI 长度限制】：翻译应尽量简明扼要，避免导致界面文字溢出。
+5. 【标点保持】：尽量维持与原文一致的末尾标点符号（如省略号... 或问号？）。
+6. 【数据结构一致性】：你返回的结果必须是合法的 JSON 对象。Key 必须与输入完全相同，不论层级有多深，绝不能增减、修改或重命名任何 Key，只能翻译其对应的 Value。当前有 ${keysCount} 个字段需要翻译，返回的 JSON 必须包含正好 ${keysCount} 个对应的字段，严禁遗漏！
+7. 【纯 JSON 输出】：不要包含任何 Markdown 标记（例如不要用 \`\`\`json 包裹），不要包含任何解释、前缀、后缀或备注。只返回纯粹的可解析 JSON 字符串！`;
 
     const userContent = JSON.stringify(batchMap, null, 2);
     return await callAI(systemPrompt, userContent, model, apiKey, apiUrl);
