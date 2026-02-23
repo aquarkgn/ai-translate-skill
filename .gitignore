@@ -13,6 +13,3 @@ locals
 output
 output/
 test-data/
-
-# bin
-bin/*
