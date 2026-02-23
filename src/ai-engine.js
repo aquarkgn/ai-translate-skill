@@ -60,7 +60,7 @@ You MUST strictly adhere to the following translation and output guidelines:
     return await callAI(systemPrompt, userContent, model, apiKey, apiUrl);
 }
 
-async function runAITranslate(templatePath, targetLang, outputPath, model, apiKey, apiUrl, force = false, batchSize = 100, maxBatches = 0) {
+async function runAITranslate(templatePath, targetLang, outputPath, model, apiKey, apiUrl, force = false, batchSize = 10, maxBatches = 0) {
     console.log('加载源模板文件...');
     const sourceData = JSON.parse(fs.readFileSync(templatePath, 'utf8'));
     const allNodes = extractNodes(sourceData);

@@ -12,7 +12,7 @@ async function main() {
         const apiUrl = options['ai-url'];
         const apiKey = options['ai-api-key'];
         const force = options['force'] || false;
-        const batchSize = options['batch-size'] ? parseInt(options['batch-size'], 10) : 100;
+        const batchSize = options['batch-size'] ? parseInt(options['batch-size'], 10) : 10;
         const maxBatches = options['max-batches'] ? parseInt(options['max-batches'], 10) : 0;
 
         if (!model || !apiUrl || !apiKey) {
