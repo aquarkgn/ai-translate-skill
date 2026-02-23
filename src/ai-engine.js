@@ -7,7 +7,6 @@ const {
 } = require('./utils');
 
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
-const BATCH_SIZE = 100;
 
 async function callAI(systemPrompt, userContent, model, apiKey, apiUrl) {
     const response = await fetch(`${apiUrl}`, {
@@ -61,7 +60,7 @@ You MUST strictly adhere to the following translation and output guidelines:
     return await callAI(systemPrompt, userContent, model, apiKey, apiUrl);
 }
 
-async function runAITranslate(templatePath, targetLang, outputPath, model, apiKey, apiUrl, force = false) {
+async function runAITranslate(templatePath, targetLang, outputPath, model, apiKey, apiUrl, force = false, batchSize = 100, maxBatches = 0) {
     console.log('加载源模板文件...');
     const sourceData = JSON.parse(fs.readFileSync(templatePath, 'utf8'));
     const allNodes = extractNodes(sourceData);
@@ -114,10 +113,16 @@ async function runAITranslate(templatePath, targetLang, outputPath, model, apiKe
         return;
     }
 
-    console.log(`- 发现 ${pendingNodes.length} 条需要翻译的文本，开始分块(Batch)翻译...`);
+    console.log(`- 发现 ${pendingNodes.length} 条需要翻译的文本，开始分块(Batch)翻译... 批次大小: ${batchSize}`);
 
-    for (let i = 0; i < pendingNodes.length; i += BATCH_SIZE) {
-        const chunk = pendingNodes.slice(i, i + BATCH_SIZE);
+    let processedBatches = 0;
+    for (let i = 0; i < pendingNodes.length; i += batchSize) {
+        if (maxBatches > 0 && processedBatches >= maxBatches) {
+            console.log(`  -> 达到最大批次限制 (${maxBatches})，终止后续翻译。`);
+            break;
+        }
+        processedBatches++;
+        const chunk = pendingNodes.slice(i, i + batchSize);
         const batchMap = {};
 
         chunk.forEach((node, idx) => {
