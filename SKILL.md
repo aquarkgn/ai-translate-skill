@@ -27,6 +27,11 @@ description: AI 多语言翻译处理技能 (支持大模型翻译)
   --ai-model <模型名称> \
   --ai-url <API 地址> \
   --ai-api-key <您的 API_KEY>
+
+### 模型调用建议 (Best Practice)
+- **14B 模型**: 如果使用 `Qwen 14B` 等中大型模型，推荐 `--batch-size 20`。
+- **GPT-4**: 推荐 `--batch-size 10-30` 视 Token 限制而定。
+- **小模型**: 若出现 Key 丢失，请减小 `--batch-size` 至 5-10。
 ```
 
 ## 注意事项与规则
